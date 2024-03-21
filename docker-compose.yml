@@ -11,7 +11,6 @@ services:
     tty: true
     volumes:
       - $PWD:/home
-      - $PATH_VOLUME:/$PATH_VOLUME
 
 networks:
   default:
