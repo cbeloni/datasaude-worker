@@ -1,0 +1,21 @@
+version: '3.7'
+
+services:
+  worker:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: worker
+    hostname: worker
+    restart: always
+    tty: true
+    volumes:
+      - $PWD:/home
+      - $PATH_VOLUME:/$PATH_VOLUME
+
+networks:
+  default:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 193.168.0.0/16
