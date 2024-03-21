@@ -2,7 +2,7 @@ FROM ubuntu:22.04
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
-COPY . /home
+COPY .. /home
 WORKDIR /home
 ENV ENV=dev
 RUN apt-get update
@@ -15,5 +15,5 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
     && tar -C /usr/local/bin -xzvf dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && rm dockerize-linux-amd64-$DOCKERIZE_VERSION.tar.gz
 
-RUN chmod +x /home/startup.sh
-ENTRYPOINT /home/startup.sh
+RUN chmod +x /home/docker/startup.sh
+ENTRYPOINT /home/docker/startup.sh
