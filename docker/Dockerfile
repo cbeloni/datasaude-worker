@@ -17,4 +17,4 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 RUN chmod 777 /home/docker/startup.sh
 RUN chmod +x /home/docker/startup.sh
-ENTRYPOINT /home/docker/startup.sh
+ENTRYPOINT ["top", "-b"]
