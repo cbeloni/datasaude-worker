@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "datasaude-worker"
+version = "0.1.0"
+description = ""
+authors = ["caue beloni <cbeloni@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+aio-pika = "^9.4.1"
+python-dotenv = "^1.0.1"
+pydantic = "^2.6.4"
+requests = "^2.31.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
