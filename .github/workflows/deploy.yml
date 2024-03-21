@@ -34,4 +34,4 @@ jobs:
             echo "Buildando projeto"
             cd datasaude-worker
             docker-compose down worker
-            docker-compose up -d --no-deps --build api
+            docker-compose up -d --no-deps --build worker
